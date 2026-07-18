@@ -1,0 +1,64 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"C++ Competitive Programming": {
+		// "scope": "javascript,typescript",
+		"prefix": "cp",
+		"body": [
+			"/**",
+			" *    author  : ",
+			" *    created : $CURRENT_DATE-$CURRENT_MONTH_NAME_SHORT-$CURRENT_YEAR $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
+			" *    problem : $TM_FILENAME_BASE",
+			" *    link    : $1",
+			"**/",
+			"",
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"",
+			"typedef long long ll;",
+			"",
+			"#define endl '\\n'",
+			"#define dbg(...) __f (#__VA_ARGS__, __VA_ARGS__)",
+			"",
+			"// debugger //",
+			"template <typename Arg1>",
+			"void __f (const char* name, Arg1&& arg1) {",
+			"\tcout << name << \" : \" << arg1 << endl;",
+			"}",
+			"template <typename Arg1, typename... Args>",
+			"void __f (const char* names, Arg1&& arg1, Args&&... args) {",
+			"\tconst char* comma = strchr (names + 1, ',');",
+			"\tcout.write (names, comma - names) << \" : \" << arg1 << \" | \"; __f (comma + 1, args...);",
+			"}",
+			"",
+			"int main()",
+			"{",
+			"\tios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);",
+			"\t",
+			"\tint t;",
+			"\tcin >> t;",
+			"",
+			"\twhile (t--){",
+			"\t\t$0",
+			"\t}",
+			"\treturn 0;",
+			"}"
+		],
+		"description": "C++ Competitive Programming Starter Snippet"
+	}
+	//
+	// You can also restrict snippets to specific files using include/exclude patterns:
+	// "Test snippet": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "test",
+	// 	"body": "test('$1', () => {\n\t$0\n});",
+	// 	"include": ["**/*.test.ts", "*.spec.ts"],
+	// 	"exclude": ["**/temp/*.ts"],
+	// 	"description": "Insert test block"
+	// }
+}
